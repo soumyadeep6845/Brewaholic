@@ -1,3 +1,4 @@
+import 'package:brew_app/screens/authenticate/authenticate.dart';
 import 'package:brew_app/screens/home_screen/home.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,6 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
 
     //return either home or authenticate widget, depending on log status
-    return Home();
+    return Authenticate();
   }
 }
