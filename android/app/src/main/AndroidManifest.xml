@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.brew_app">
    <application
-        android:label="brew_app"
+        android:label="Brewaholic"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
