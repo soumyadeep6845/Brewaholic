@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "475579412389",
+    "project_id": "brewaholic-8a096",
+    "storage_bucket": "brewaholic-8a096.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475579412389:android:9c19d0899641c99fcc424c",
+        "android_client_info": {
+          "package_name": "com.example.brew_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475579412389-731eoaos30nbh87sk3o0mj3c0gm1nvvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGat50ZHJcg8-Ii_-bO8CXUg67ZuMBtC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475579412389-731eoaos30nbh87sk3o0mj3c0gm1nvvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
