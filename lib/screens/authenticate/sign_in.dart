@@ -2,6 +2,9 @@ import 'package:brew_app/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
+  final Function toggleView;
+  SignIn({required this.toggleView});
+
   @override
   _signInState createState() => _signInState();
 }
@@ -21,6 +24,13 @@ class _signInState extends State<SignIn> {
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
         title: Text('Sign in to Brewaholic!'),
+        actions: [
+          FlatButton.icon(
+            icon: Icon(Icons.person),
+            label: Text('Register'),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Container(
         padding: EdgeInsets.symmetric(
