@@ -22,8 +22,8 @@ class _signInState extends State<SignIn> {
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
-        elevation: 0.0,
         title: Text('Sign in to Brewaholic!'),
+        elevation: 0.0,
         actions: [
           FlatButton.icon(
             icon: Icon(Icons.person),
