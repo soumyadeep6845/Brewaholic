@@ -28,7 +28,9 @@ class _RegisterState extends State<Register> {
           FlatButton.icon(
             icon: Icon(Icons.person),
             label: Text('Sign in'),
-            onPressed: () {},
+            onPressed: () {
+              widget.toggleView();
+            },
           ),
         ],
       ),

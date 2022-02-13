@@ -28,7 +28,9 @@ class _signInState extends State<SignIn> {
           FlatButton.icon(
             icon: Icon(Icons.person),
             label: Text('Register'),
-            onPressed: () {},
+            onPressed: () {
+              widget.toggleView();
+            },
           ),
         ],
       ),
