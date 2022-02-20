@@ -16,6 +16,7 @@ class _RegisterState extends State<Register> {
   //Text field state
   String email = '';
   String password = '';
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +56,15 @@ class _RegisterState extends State<Register> {
               ),
               SizedBox(height: 20),
               TextFormField(
-                validator: (val) => val!.length < 6 ? 'Enter a password more than 6 characters' : null,
+                validator: (val) {
+                  if (val!.length < 6) {
+                    return 'Enter a password more than 6 characters';
+                  } else if (val.isEmpty) {
+                    return 'Enter a password';
+                  } else {
+                    return null;
+                  }
+                },
                 obscureText: true,
                 onChanged: (val) {
                   setState(() {
@@ -71,8 +80,13 @@ class _RegisterState extends State<Register> {
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () async {
-                  if (_formKey.currentState!.validate()){
-                    //DO SOMETHING HERE
+                  if (_formKey.currentState!.validate()) {
+                    dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+                    if(result == null) {
+                      setState(() {
+                        error = 'Authentication failed. Please try again!';
+                      });
+                    }
                   }
                 },
               ),

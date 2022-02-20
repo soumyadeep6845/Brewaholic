@@ -11,29 +11,40 @@ class AuthService {
 
   //Auth change user stream
   Stream<Users?> get user {
-    return _auth.authStateChanges()
-    // .map((User? user) => _userFromFirebaseUser(user));
-    .map(_userFromFirebaseUser);
+    return _auth
+        .authStateChanges()
+        // .map((User? user) => _userFromFirebaseUser(user));
+        .map(_userFromFirebaseUser);
   }
-  
+
   //Signing in anonymously
   Future signInAnon() async {
     try {
       UserCredential result = await _auth.signInAnonymously();
       User? user = result.user;
       return _userFromFirebaseUser(user);
-    } catch(error) {
+    } catch (error) {
       print(error.toString());
       return null;
     }
   }
 
-
   //Signing in with email and password
 
-
   //Register with email and password
-
+  Future registerWithEmailAndPassword(String email, String password) async {
+    try {
+      UserCredential result = await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      User? user = result.user; 
+      return _userFromFirebaseUser(user);
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 
   //Signing out
   Future signOut() async {
