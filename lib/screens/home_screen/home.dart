@@ -1,5 +1,6 @@
 import 'package:brew_app/models/brew.dart';
 import 'package:brew_app/screens/home_screen/brew_list.dart';
+import 'package:brew_app/screens/home_screen/settings_form.dart';
 import 'package:brew_app/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:brew_app/services/database.dart';
@@ -18,7 +19,7 @@ class Home extends StatelessWidget {
         builder: (context) {
           return Container(
             padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
-            child: Text('Bottom Sheet'),
+            child: SettingsForm(),
           );
         },
       );
