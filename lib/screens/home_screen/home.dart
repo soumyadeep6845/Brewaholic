@@ -12,7 +12,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     void _showSettingsPanel() {
       showModalBottomSheet(
         context: context,
@@ -23,7 +22,7 @@ class Home extends StatelessWidget {
           );
         },
       );
-    } 
+    }
 
     return StreamProvider<List<Brew>?>.value(
       value: DatabaseService(uid: '').brews,
@@ -49,7 +48,15 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
-        body: BrewList(),
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/coffee_bg.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: BrewList(),
+        ),
       ),
     );
   }
